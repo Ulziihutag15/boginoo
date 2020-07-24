@@ -26,6 +26,7 @@ export const HomeDefault = () => {
     useEffect(() => {
         if (user && firestore) {
             console.log(user.email);
+            console.log('dsdasdasdds');
             firestore.collection('shortened').where("email", "==", user.email)
                 .orderBy("createdAt", "desc")
                 .limit(1)
